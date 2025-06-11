@@ -37,6 +37,12 @@
       text-decoration: none;
       margin-right: 1rem;
     }
+    nav a:last-child {
+      margin-right: 0;
+    }
+    nav a[href="contact.html"] {
+      cursor: pointer;
+    }
     .hero {
       padding: 3rem 2rem;
       text-align: center;
@@ -119,7 +125,7 @@
     <nav>
       <a href="about.html">About</a>
       <a href="policies.html">Policies</a>
-      <a href="contact.html">Contact</a>
+      <a onclick="window.location.href='mailto:contact@quessar.com'">Contact</a>
     </nav>
   </header>
 
