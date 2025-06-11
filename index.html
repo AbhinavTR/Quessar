@@ -2,119 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quessar – On‑Demand EV Charging</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quessar - On-Demand EV Charging</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
-    html { scroll-behavior: smooth; }
-    body { color:#111827; }
-
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #fdfdfd;
+      color: #111827;
+    }
     nav {
-      position:fixed; top:0; width:100%; background:#fff; box-shadow:0 2px 4px rgba(0,0,0,0.1);
-      display:flex; justify-content:space-between; align-items:center; padding:0.75rem 2rem;
-      z-index:1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .nav-left img {
-      height:40px;
-    }
-    nav ul {
-      display:flex; gap:2rem; list-style:none;
+    nav img {
+      height: 48px; /* Increased logo size */
     }
     nav a {
-      color:#374151; text-decoration:none; font-weight:600; transition: color 0.3s;
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: 500;
     }
     nav a:hover {
-      color:#10b981;
+      color: #10b981;
     }
-
-    section {
-      padding:100px 1.5rem; max-width:1000px; margin:0 auto; text-align:center;
+    .hero {
+      background-color: #10b981;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem 2rem;
     }
-    #hero {
-      background:#10b981; color:#fff; padding-top:160px; padding-bottom:100px;
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    #hero h1 {
-      font-size:2.5rem; margin-bottom:1rem;
-    }
-    #hero p {
-      font-size:1.2rem; max-width:650px; margin:0 auto; line-height:1.6;
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
     }
     .cta-button {
-      display:inline-block; margin-top:2rem; background:#fff; color:#10b981;
-      padding:0.75rem 2rem; font-size:1rem; border:none; border-radius:4px;
-      font-weight:600; cursor:pointer; transition:background 0.3s;
+      background-color: #ffffff;
+      color: #10b981;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
     }
-    .cta-button:hover {
-      background:#f0fdf4;
+    .illustration {
+      text-align: center;
+      margin-top: 2rem;
     }
-
-    .hero-image {
-      margin-top:2rem;
+    .illustration img {
+      width: 90%;
+      max-width: 600px;
     }
-    .hero-image img {
-      width:100%; max-width:600px;
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
     }
-
-    #about, #services {
-      background:#f9fafb;
+    section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
     }
-
-    h2 {
-      font-size:2rem; margin-bottom:1rem; color:#1f2937;
+    section p {
+      font-size: 1.05rem;
+      color: #4b5563;
     }
-    p {
-      font-size:1rem; color:#4b5563; line-height:1.7;
-    }
-    .icon {
-      color:#10b981; margin:1.5rem 0 0.5rem; font-size:2.5rem;
-    }
-
-    #contact a {
-      color:#10b981; font-weight:600;
-    }
-
-    @media(max-width:768px){
-      nav {
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      nav ul {
-        flex-direction:column;
-        gap:0.5rem;
-        margin-top:0.5rem;
-      }
-      #hero h1 { font-size:2rem; }
-      #hero p { font-size:1rem; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f3f4f6;
+      color: #6b7280;
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <div class="nav-left">
-      <img src="logo.png" alt="Quessar Logo">
+    <img src="logo.png" alt="Quessar Logo">
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="mailto:contact@quessar.com">Contact</a>
     </div>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="mailto:contact@quessar.com">Contact</a></li>
-    </ul>
   </nav>
 
-  <section id="hero">
+  <div class="hero">
     <h1>EV Charging, Reimagined for India</h1>
-    <p>Quessar’s silent, modular battery units come to your doorstep — at home, work or on the go. No stations, no waiting, just clean, effortless power.</p>
-    <button class="cta-button" onclick="location.href='mailto:contact@quessar.com'">Get in Touch</button>
-    <div class="hero-image">
-      <img src="mockup.png" alt="Quessar EV Charging Mockup" />
+    <p>Quessar's silent, modular battery units come to your doorstep — at home, work or on the go. No stations, no waiting, just clean, effortless power.</p>
+    <a href="mailto:contact@quessar.com" class="cta-button">Get in Touch</a>
+    <div class="illustration">
+      <img src="mockup.png" alt="EV Charging Illustration">
     </div>
-  </section>
+  </div>
 
   <section id="about">
     <h2>About Quessar</h2>
-    <i class="fas fa-bolt icon"></i>
-    <p>Quessar is a revolutionary mobile EV charging service built for India's fast-paced urban life. With compact, silent, modular battery packs, we bring energy directly to where it’s needed — without noise, delay, or dependency on large charging infrastructure.<
-                                                                                                                                                                                                                                                                          
+    <p>
+      Quessar is a revolutionary mobile EV charging service built for India's fast-paced urban life. With compact, silent, modular battery packs, we bring energy directly to where it’s needed — without noise, delay, or dependency on large charging infrastructure.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>
+      • On-demand EV charging delivery <br/>
+      • Subscription-based battery swap plans <br/>
+      • Emergency power delivery for stranded EVs <br/>
+      • Corporate fleet charging solutions
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Quessar. All rights reserved.
+  </footer>
+
+</body>
+</html>
