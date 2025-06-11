@@ -16,6 +16,9 @@
       background-color: #0d0d0d;
       color: #fff;
       line-height: 1.6;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
     }
     header {
       background: #1a1a1a;
@@ -23,6 +26,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 2;
+      position: relative;
     }
     header h1 {
       color: #00c897;
@@ -98,15 +103,23 @@
       text-decoration: none;
       margin: 0 0.5rem;
     }
+    .click-layer {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
+  <div class="click-layer" onclick="window.location.href='mailto:contact@quessar.com'"></div>
+
   <header>
     <h1>Quessar</h1>
     <nav>
       <a href="about.html">About</a>
       <a href="policies.html">Policies</a>
-      <a href="#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
