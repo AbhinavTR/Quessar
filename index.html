@@ -3,102 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quessar - On-Demand EV Charging</title>
+  <title>Quessar – On-Demand EV Charging</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
       font-family: 'Inter', sans-serif;
     }
-    html {
-      scroll-behavior: smooth;
-    }
+
     body {
       background-color: #fdfdfd;
-      color: #111827;
+      color: #1f2937;
+      line-height: 1.6;
     }
+
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      z-index: 10;
     }
-    nav img {
-      height: 48px; /* Increased logo size */
+
+    nav img.logo {
+      height: 70px;
+      width: auto;
     }
-    nav a {
-      margin: 0 1rem;
+
+    nav div a {
+      margin-left: 2rem;
       text-decoration: none;
-      color: #1f2937;
-      font-weight: 500;
+      color: #374151;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
+
+    nav div a:hover {
       color: #10b981;
     }
-    .hero {
+
+    header {
       background-color: #10b981;
-      color: white;
+      color: #ffffff;
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 4rem 1rem 2rem;
     }
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
     }
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      font-size: 1.1rem;
+
+    header p {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
+
     .cta-button {
+      margin-top: 2rem;
       background-color: #ffffff;
       color: #10b981;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
+
+    .cta-button:hover {
+      background-color: #f0fdf4;
+    }
+
     .illustration {
-      text-align: center;
-      margin-top: 2rem;
+      margin: 3rem auto;
+      max-width: 700px;
+      padding: 0 1rem;
     }
+
     .illustration img {
-      width: 90%;
-      max-width: 600px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
+
     section {
-      padding: 3rem 1.5rem;
-      max-width: 800px;
+      padding: 3rem 2rem;
+      max-width: 900px;
       margin: auto;
     }
+
     section h2 {
-      font-size: 1.75rem;
+      font-size: 2rem;
+      font-weight: 700;
       margin-bottom: 1rem;
-      color: #1f2937;
+      color: #111827;
     }
+
     section p {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       color: #4b5563;
     }
+
     footer {
-      text-align: center;
       padding: 2rem;
-      background-color: #f3f4f6;
+      text-align: center;
+      font-size: 0.9rem;
       color: #6b7280;
+      background-color: #f9fafb;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav div {
+        margin-top: 1rem;
+      }
+      nav div a {
+        margin: 0 1rem 1rem 0;
+        display: inline-block;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <img src="logo.png" alt="Quessar Logo">
+    <img src="logo.png" alt="Quessar Logo" class="logo" />
     <div>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -106,34 +154,28 @@
     </div>
   </nav>
 
-  <div class="hero">
+  <header>
     <h1>EV Charging, Reimagined for India</h1>
     <p>Quessar's silent, modular battery units come to your doorstep — at home, work or on the go. No stations, no waiting, just clean, effortless power.</p>
-    <a href="mailto:contact@quessar.com" class="cta-button">Get in Touch</a>
-    <div class="illustration">
-      <img src="mockup.png" alt="EV Charging Illustration">
-    </div>
+    <a href="mailto:contact@quessar.com"><button class="cta-button">Get in Touch</button></a>
+  </header>
+
+  <div class="illustration">
+    <img src="A_flat-style_digital_illustration_promotes_Quessar.png" alt="Quessar EV Charging Illustration">
   </div>
 
   <section id="about">
     <h2>About Quessar</h2>
-    <p>
-      Quessar is a revolutionary mobile EV charging service built for India's fast-paced urban life. With compact, silent, modular battery packs, we bring energy directly to where it’s needed — without noise, delay, or dependency on large charging infrastructure.
-    </p>
+    <p>Quessar is a revolutionary mobile EV charging service built for India’s fast-paced urban life. With compact, silent, modular battery packs, we bring energy directly to where it’s needed — without noise, delay, or dependency on large charging infrastructure.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
-    <p>
-      • On-demand EV charging delivery <br/>
-      • Subscription-based battery swap plans <br/>
-      • Emergency power delivery for stranded EVs <br/>
-      • Corporate fleet charging solutions
-    </p>
+    <p>We provide silent, door-to-door EV charging through smart mobile battery units. Whether you're parked at home, in the office, or on the road, Quessar delivers power where you need it most — efficiently, quietly, and sustainably.</p>
   </section>
 
   <footer>
-    &copy; 2025 Quessar. All rights reserved.
+    © 2025 Quessar. All rights reserved. | contact@quessar.com
   </footer>
 
 </body>
