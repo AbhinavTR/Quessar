@@ -1,168 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quessar - Silent EV Charging</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    body {
-      background-color: #0d0d0d;
-      color: #fff;
-      line-height: 1.6;
-      height: 100vh;
-      width: 100vw;
-      overflow-x: hidden;
-    }
-    header {
-      background: #1a1a1a;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 2;
-    }
-    header h1 {
-      color: #00c897;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 1rem;
-      cursor: pointer;
-    }
-    nav a:last-child {
-      margin-right: 0;
-    }
-    .hero {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .hero input[type="text"] {
-      padding: 0.75rem;
-      width: 70%;
-      max-width: 400px;
-      border: none;
-      border-radius: 8px;
-      margin-right: 0.5rem;
-    }
-    .hero button {
-      padding: 0.75rem 1.5rem;
-      background: #00c897;
-      border: none;
-      border-radius: 8px;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .illustration {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .illustration img {
-      width: 80%;
-      max-width: 600px;
-      border-radius: 12px;
-    }
-    .features {
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      background: #111;
-    }
-    .feature {
-      flex: 1 1 200px;
-      margin: 1rem;
-      padding: 1rem;
-      background: #1e1e1e;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .feature i {
-      font-size: 2rem;
-      color: #00c897;
-      margin-bottom: 0.5rem;
-    }
-    footer {
-      background: #1a1a1a;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    footer a {
-      color: #00c897;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quessar - Silent EV Charging</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Quessar offers silent, fast, door-to-door EV charging services using modular battery swapping technology. Get charged at your doorstep in minutes." />
+  <meta name="keywords" content="EV charging, battery swapping, electric vehicles, doorstep charging, Quessar, silent EV service, Bangalore electric scooter charging" />
+  <meta name="author" content="Quessar" />
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Quessar - Silent EV Charging at Your Doorstep" />
+  <meta property="og:description" content="Charge your electric vehicle silently and quickly, wherever you are. Quessar delivers batteries to you." />
+  <meta property="og:image" content="https://quessar.com/illustration.png" />
+  <meta property="og:url" content="https://quessar.com/" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
+      height: 100vh;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+    header h1 {
+      color: #00c897;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+    nav a:last-child {
+      margin-right: 0;
+    }
+    .hero {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero input[type="text"] {
+      padding: 0.75rem;
+      width: 70%;
+      max-width: 400px;
+      border: none;
+      border-radius: 8px;
+      margin-right: 0.5rem;
+    }
+    .hero button {
+      padding: 0.75rem 1.5rem;
+      background: #00c897;
+      border: none;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .illustration {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .illustration img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 12px;
+    }
+    .features {
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background: #111;
+    }
+    .feature {
+      flex: 1 1 200px;
+      margin: 1rem;
+      padding: 1rem;
+      background: #1e1e1e;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .feature i {
+      font-size: 2rem;
+      color: #00c897;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      background: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    footer a {
+      color: #00c897;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Quessar</h1>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="policies.html">Policies</a>
-      <a href="mailto:contact@quessar.com">Contact</a>
-    </nav>
-  </header>
+  <header>
+    <h1>Quessar</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="policies.html">Policies</a>
+      <a href="mailto:contact@quessar.com">Contact</a>
+    </nav>
+  </header>
 
-  <section class="hero">
-    <h2>Get Silent EV Charging at Your Doorstep</h2>
-    <input type="text" placeholder="Enter your location" />
-    <button>Check Availability</button>
-  </section>
+  <section class="hero">
+    <h2>Get Silent EV Charging at Your Doorstep</h2>
+    <input type="text" placeholder="Enter your location" />
+    <button>Check Availability</button>
+  </section>
 
-  <div class="illustration">
-    <img src="illustration.png" alt="EV charging by scooter illustration" />
-  </div>
+  <div class="illustration">
+    <img src="illustration.png" alt="EV charging by scooter illustration" />
+  </div>
 
-  <section class="features">
-    <div class="feature">
-      <i class="fas fa-bolt"></i>
-      <h3>Fast Charging</h3>
-      <p>Charge on demand in under 30 minutes</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-volume-mute"></i>
-      <h3>Silent Delivery</h3>
-      <p>Whisper-quiet battery swapping at your location</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-map-marker-alt"></i>
-      <h3>Trackable Units</h3>
-      <p>Real-time tracking of your battery delivery</p>
-    </div>
-  </section>
+  <section class="features">
+    <div class="feature">
+      <i class="fas fa-bolt"></i>
+      <h3>Fast Charging</h3>
+      <p>Charge on demand in under 30 minutes</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-volume-mute"></i>
+      <h3>Silent Delivery</h3>
+      <p>Whisper-quiet battery swapping at your location</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>Trackable Units</h3>
+      <p>Real-time tracking of your battery delivery</p>
+    </div>
+  </section>
 
-  <footer>
-    <div id="contact">
-      <p>Contact us: <a href="mailto:contact@quessar.com">contact@quessar.com</a></p>
-      <p>&copy; 2025 Quessar. All rights reserved.</p>
-      <p>
-        <a href="about.html">About</a> |
-        <a href="policies.html">Privacy Policy</a> |
-        <a href="policies.html#terms">Terms of Use</a>
-      </p>
-    </div>
-  </footer>
+  <footer>
+    <div id="contact">
+      <p>Contact us: <a href="mailto:contact@quessar.com">contact@quessar.com</a></p>
+      <p>&copy; 2025 Quessar. All rights reserved.</p>
+      <p>
+        <a href="about.html">About</a> |
+        <a href="policies.html">Privacy Policy</a> |
+        <a href="policies.html#terms">Terms of Use</a>
+      </p>
+    </div>
+  </footer>
 
-  <script>
-    document.querySelector("button").addEventListener("click", function () {
-      alert("We're launching in select areas soon. Stay tuned!");
-    });
-  </script>
+  <script>
+    document.querySelector("button").addEventListener("click", function () {
+      alert("We're launching in select areas soon. Stay tuned!");
+    });
+  </script>
 </body>
 </html>
