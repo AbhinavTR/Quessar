@@ -9,22 +9,44 @@
   <meta name="description" content="Quessar offers silent, fast, door-to-door EV charging services using modular battery swapping technology. Get charged at your doorstep in minutes." />
   <meta name="keywords" content="EV charging, battery swapping, electric vehicles, doorstep charging, Quessar, silent EV service, Bangalore electric scooter charging" />
   <meta name="author" content="Quessar" />
+  <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph / Social Media Meta Tags -->
+  <!-- Open Graph Meta -->
   <meta property="og:title" content="Quessar - Silent EV Charging at Your Doorstep" />
   <meta property="og:description" content="Charge your electric vehicle silently and quickly, wherever you are. Quessar delivers batteries to you." />
   <meta property="og:image" content="https://quessar.com/illustration.png" />
   <meta property="og:url" content="https://quessar.com/" />
   <meta property="og:type" content="website" />
 
+  <!-- Structured Data (JSON-LD Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Quessar",
+    "url": "https://quessar.com",
+    "logo": "https://quessar.com/logo.png",
+    "description": "Silent, modular door-to-door EV charging service.",
+    "email": "contact@quessar.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Abhinav T R"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Fonts and Icons -->
+  <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
   <style>
-    /* All your CSS here */
     * {
       margin: 0;
       padding: 0;
@@ -35,8 +57,6 @@
       background-color: #0d0d0d;
       color: #fff;
       line-height: 1.6;
-      height: 100vh;
-      width: 100vw;
       overflow-x: hidden;
     }
     header {
@@ -45,37 +65,41 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 2;
     }
-    header h1 {
-      color: #00c897;
+    header img {
+      height: 40px;
     }
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-right: 1rem;
-      cursor: pointer;
-    }
-    nav a:last-child {
-      margin-right: 0;
+      margin-left: 1rem;
     }
     .hero {
-      padding: 3rem 2rem;
       text-align: center;
+      padding: 4rem 2rem;
     }
-    .hero h2 {
-      font-size: 2rem;
+    .hero h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: #00c897;
     }
-    .hero input[type="text"] {
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    input[type="email"] {
       padding: 0.75rem;
-      width: 70%;
-      max-width: 400px;
-      border: none;
+      width: 250px;
       border-radius: 8px;
-      margin-right: 0.5rem;
+      border: none;
     }
-    .hero button {
+    button {
       padding: 0.75rem 1.5rem;
       background: #00c897;
       border: none;
@@ -94,17 +118,17 @@
       border-radius: 12px;
     }
     .features {
-      padding: 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      padding: 2rem 1rem;
       background: #111;
     }
     .feature {
-      flex: 1 1 200px;
+      flex: 1 1 250px;
       margin: 1rem;
-      padding: 1rem;
       background: #1e1e1e;
+      padding: 1rem;
       border-radius: 10px;
       text-align: center;
     }
@@ -112,6 +136,9 @@
       font-size: 2rem;
       color: #00c897;
       margin-bottom: 0.5rem;
+    }
+    .feature h3 {
+      margin: 0.5rem 0;
     }
     footer {
       background: #1a1a1a;
@@ -125,12 +152,21 @@
       text-decoration: none;
       margin: 0 0.5rem;
     }
+    .socials {
+      margin-top: 1rem;
+    }
+    .socials a {
+      color: #00c897;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+    }
   </style>
 </head>
 
 <body>
+
   <header>
-    <h1>Quessar</h1>
+    <img src="logo.png" alt="Quessar logo">
     <nav>
       <a href="about.html">About</a>
       <a href="policies.html">Policies</a>
@@ -139,13 +175,16 @@
   </header>
 
   <section class="hero">
-    <h2>Get Silent EV Charging at Your Doorstep</h2>
-    <input type="text" placeholder="Enter your location" />
-    <button>Check Availability</button>
+    <h1>Silent EV Charging at Your Doorstep</h1>
+    <p>Modular battery units delivered to you in minutes. Join the waitlist.</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Join Waitlist</button>
+    </form>
   </section>
 
   <div class="illustration">
-    <img src="illustration.png" alt="EV charging by scooter illustration" />
+    <img src="illustration.png" alt="Silent EV charging delivery illustration" />
   </div>
 
   <section class="features">
@@ -166,22 +205,37 @@
     </div>
   </section>
 
+  <section class="features">
+    <div class="feature">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>1. Request a Charge</h3>
+      <p>Use our app or website to request a charging unit.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-shipping-fast"></i>
+      <h3>2. Mobile Unit Arrives</h3>
+      <p>We dispatch a silent mobile battery to your location.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-battery-full"></i>
+      <h3>3. Get Charged</h3>
+      <p>Your EV is charged in minutes without noise or cables.</p>
+    </div>
+  </section>
+
   <footer>
-    <div id="contact">
-      <p>Contact us: <a href="mailto:contact@quessar.com">contact@quessar.com</a></p>
-      <p>&copy; 2025 Quessar. All rights reserved.</p>
-      <p>
-        <a href="about.html">About</a> |
-        <a href="policies.html">Privacy Policy</a> |
-        <a href="policies.html#terms">Terms of Use</a>
-      </p>
+    <p>Contact us: <a href="mailto:contact@quessar.com">contact@quessar.com</a></p>
+    <p>&copy; 2025 Quessar. All rights reserved.</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="policies.html">Privacy Policy</a> |
+      <a href="policies.html#terms">Terms of Use</a>
+    </p>
+    <div class="socials">
+      <a href="https://linkedin.com/company/quessar" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/quessarofficial" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
 
-  <script>
-    document.querySelector("button").addEventListener("click", function () {
-      alert("We're launching in select areas soon. Stay tuned!");
-    });
-  </script>
 </body>
 </html>
