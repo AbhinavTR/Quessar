@@ -1,5 +1,6 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,11 +32,13 @@
       box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
     }
+
     body {
       background-color: #0d0d0d;
       color: #fff;
       line-height: 1.6;
     }
+
     header {
       background: #1a1a1a;
       padding: 1rem 2rem;
@@ -43,39 +46,48 @@
       justify-content: space-between;
       align-items: center;
     }
+
     header img {
       height: 40px;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
       margin-left: 1rem;
     }
+
     .hero {
       text-align: center;
       padding: 4rem 2rem;
     }
+
     .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: #00c897;
     }
+
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
     }
+
     form {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-    input[type="email"] {
+
+    input[type="email"],
+    input[type="text"] {
       padding: 0.75rem;
       width: 250px;
       border-radius: 8px;
       border: none;
     }
+
     button {
       padding: 0.75rem 1.5rem;
       background: #00c897;
@@ -85,15 +97,23 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    #availabilityMessage {
+      margin-top: 1rem;
+      color: #00c897;
+    }
+
     .illustration {
       text-align: center;
       margin: 2rem 0;
     }
+
     .illustration img {
       width: 80%;
       max-width: 600px;
       border-radius: 12px;
     }
+
     .features {
       display: flex;
       flex-wrap: wrap;
@@ -101,6 +121,7 @@
       padding: 2rem 1rem;
       background: #111;
     }
+
     .feature {
       flex: 1 1 250px;
       margin: 1rem;
@@ -109,14 +130,17 @@
       border-radius: 10px;
       text-align: center;
     }
+
     .feature i {
       font-size: 2rem;
       color: #00c897;
       margin-bottom: 0.5rem;
     }
+
     .feature h3 {
       margin: 0.5rem 0;
     }
+
     footer {
       background: #1a1a1a;
       padding: 1rem;
@@ -124,14 +148,17 @@
       font-size: 0.9rem;
       color: #888;
     }
+
     footer a {
       color: #00c897;
       text-decoration: none;
       margin: 0 0.5rem;
     }
+
     .socials {
       margin-top: 1rem;
     }
+
     .socials a {
       color: #00c897;
       margin: 0 0.5rem;
@@ -152,7 +179,21 @@
 
   <section class="hero">
     <h1>Silent EV Charging at Your Doorstep</h1>
-    <p>We bring clean, quiet charging to your vehicle — wherever you are.</p>
+    <p>Check availability in your area or join the waitlist below.</p>
+
+    <!-- PIN Code Checker -->
+    <form id="pincodeForm">
+      <input type="text" id="pincodeInput" placeholder="Enter your PIN code" required />
+      <button type="submit">Check Availability</button>
+    </form>
+    <p id="availabilityMessage"></p>
+
+    <!-- Divider -->
+    <hr style="margin: 3rem auto; width: 60%; border: 0; border-top: 1px solid #333;" />
+
+    <!-- Waitlist Form -->
+    <h2 style="margin-top: 1rem; color: #00c897;">Join Our Waitlist</h2>
+    <p>Be the first to know when we launch in your area.</p>
     <form action="https://formspree.io/f/mrbkkrzq" method="POST">
       <input type="email" name="email" placeholder="Enter your email" required />
       <input type="hidden" name="source" value="Quessar Landing Page" />
@@ -213,5 +254,21 @@
       <a href="https://instagram.com/quessarofficial" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
+
+  <!-- Pincode search logic -->
+  <script>
+    document.getElementById("pincodeForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const pincode = document.getElementById("pincodeInput").value.trim();
+      const message = document.getElementById("availabilityMessage");
+
+      if (pincode.length === 6 && /^\d+$/.test(pincode)) {
+        message.innerText = "🚧 We're not available in this location yet — but we’re expanding fast. Stay tuned!";
+      } else {
+        message.innerText = "❌ Please enter a valid 6-digit PIN code.";
+      }
+    });
+  </script>
+
 </body>
 </html>
