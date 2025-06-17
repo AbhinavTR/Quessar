@@ -1,171 +1,45 @@
-<!DOCTYPE html>    
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quessar - Silent Door-to-Door EV Charging</title>
-
-  <!-- SEO Meta Tags -->
   <meta name="description" content="Quessar offers silent, fast, door-to-door EV charging services using modular mobile charging units. Get your EV charged wherever you are — no charging station needed." />
   <meta name="keywords" content="EV charging, electric vehicles, doorstep EV charging, Quessar, mobile EV charger, Bangalore EV charging, silent EV charging" />
   <meta name="author" content="Quessar" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph Meta -->
   <meta property="og:title" content="Quessar - Silent EV Charging at Your Doorstep" />
   <meta property="og:description" content="Charge your electric vehicle silently and quickly at your location. Quessar brings the charger to you — no cables, no queues." />
   <meta property="og:image" content="https://quessar.netlify.app/illustration.png" />
   <meta property="og:url" content="https://quessar.netlify.app/" />
   <meta property="og:type" content="website" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background-color: #0d0d0d;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #1a1a1a;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header img {
-      height: 40px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 1rem;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #00c897;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    form {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    input[type="text"] {
-      padding: 0.75rem;
-      width: 250px;
-      border-radius: 8px;
-      border: none;
-    }
-
-    button {
-      padding: 0.75rem 1.5rem;
-      background: #00c897;
-      border: none;
-      border-radius: 8px;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    #availabilityMessage {
-      margin-top: 1rem;
-      color: #00c897;
-    }
-
-    .illustration {
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .illustration img {
-      width: 80%;
-      max-width: 600px;
-      border-radius: 12px;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 2rem 1rem;
-      background: #111;
-    }
-
-    .feature {
-      flex: 1 1 250px;
-      margin: 1rem;
-      background: #1e1e1e;
-      padding: 1rem;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .feature i {
-      font-size: 2rem;
-      color: #00c897;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature h3 {
-      margin: 0.5rem 0;
-    }
-
-    footer {
-      background: #1a1a1a;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    footer a {
-      color: #00c897;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-
-    .socials {
-      margin-top: 1rem;
-    }
-
-    .socials a {
-      color: #00c897;
-      margin: 0 0.5rem;
-      font-size: 1.2rem;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background-color: #0d0d0d; color: #fff; line-height: 1.6; }
+    header { background: #1a1a1a; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    header img { height: 40px; }
+    nav a { color: #fff; text-decoration: none; margin-left: 1rem; }
+    .hero { text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #00c897; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    form { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; }
+    input[type="text"] { padding: 0.75rem; width: 250px; border-radius: 8px; border: none; }
+    button { padding: 0.75rem 1.5rem; background: #00c897; border: none; border-radius: 8px; color: #000; font-weight: bold; cursor: pointer; }
+    #availabilityMessage { margin-top: 1rem; color: #00c897; }
+    .illustration { text-align: center; margin: 2rem 0; }
+    .illustration img { width: 80%; max-width: 600px; border-radius: 12px; }
+    .features { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 2rem 1rem; background: #111; }
+    .feature { flex: 1 1 250px; margin: 1rem; background: #1e1e1e; padding: 1rem; border-radius: 10px; text-align: center; }
+    .feature i { font-size: 2rem; color: #00c897; margin-bottom: 0.5rem; }
+    .feature h3 { margin: 0.5rem 0; }
+    footer { background: #1a1a1a; padding: 1rem; text-align: center; font-size: 0.9rem; color: #888; }
+    footer a { color: #00c897; text-decoration: none; margin: 0 0.5rem; }
+    .socials { margin-top: 1rem; }
+    .socials a { color: #00c897; margin: 0 0.5rem; font-size: 1.2rem; }
   </style>
 </head>
-
 <body>
   <header>
     <img src="logo.png" alt="Quessar logo" />
@@ -176,3 +50,80 @@
       <a href="mailto:contact@quessar.com">Contact</a>
     </nav>
   </header>
+  <section class="hero">
+    <h1>Silent EV Charging at Your Doorstep</h1>
+    <p>Check availability in your area below.</p>
+    <form id="pincodeForm">
+      <input type="text" id="pincodeInput" placeholder="Enter your PIN code" required />
+      <button type="submit">Check Availability</button>
+    </form>
+    <p id="availabilityMessage"></p>
+  </section>
+  <div class="illustration">
+    <img src="illustration.png" alt="Mobile EV charging illustration" />
+  </div>
+  <section class="features">
+    <div class="feature">
+      <i class="fas fa-bolt"></i>
+      <h3>Fast Charging</h3>
+      <p>On-demand mobile charging in under 30 minutes</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-volume-mute"></i>
+      <h3>Silent Operations</h3>
+      <p>No noise. No pollution. Just clean power at your location.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>Delivered Anywhere</h3>
+      <p>We reach your home, office, or parking spot — no cables needed</p>
+    </div>
+  </section>
+  <section class="features">
+    <div class="feature">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>1. Request a Charge</h3>
+      <p>Use our app or website to request doorstep EV charging</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-shipping-fast"></i>
+      <h3>2. Mobile Unit Arrives</h3>
+      <p>We dispatch a silent mobile charger to your location</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-battery-full"></i>
+      <h3>3. Plug & Power Up</h3>
+      <p>Your EV is charged quietly while you relax or work</p>
+    </div>
+  </section>
+  <section style="text-align: center; padding: 2rem 1rem; background: #0d0d0d;">
+    <p style="color: #aaa; font-size: 0.95rem; margin-bottom: 1rem;">Quessar is proudly recognized and registered:</p>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
+      <div style="color: #00c897; font-size: 1.2rem;"><i class="fas fa-award" style="margin-right: 6px;"></i> Startup India</div>
+      <div style="color: #00c897; font-size: 1.2rem;"><i class="fas fa-id-card-alt" style="margin-right: 6px;"></i> UDYAM Registered</div>
+      <div style="color: #00c897; font-size: 1.2rem;"><i class="fas fa-lock" style="margin-right: 6px;"></i> Patent Filed</div>
+    </div>
+  </section>
+  <footer>
+    <p>Contact us: <a href="mailto:contact@quessar.com">contact@quessar.com</a></p>
+    <p>&copy; 2025 Quessar. All rights reserved.</p>
+    <p><a href="about.html">About</a> | <a href="policies.html">Privacy Policy</a> | <a href="policies.html#terms">Terms of Use</a></p>
+    <div class="socials">
+      <a href="https://linkedin.com/company/quessar" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/quessar_official" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("pincodeForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const pincode = document.getElementById("pincodeInput").value.trim();
+      const message = document.getElementById("availabilityMessage");
+      if (pincode.length === 6 && /^\d+$/.test(pincode)) {
+        message.innerText = "🚧 We're not available in this location yet — but we’re expanding fast. Stay tuned!";
+      } else {
+        message.innerText = "❌ Please enter a valid 6-digit PIN code.";
+      }
+    });
+  </script>
+</body>
+</html>
