@@ -10,92 +10,139 @@
       background-color: #0d0d0d;
       color: #ffffff;
       font-family: 'Segoe UI', sans-serif;
-      padding: 2rem;
-      line-height: 1.8;
+      margin: 0;
+      padding: 0;
     }
-    h1, h2 {
-      color: #00c897;
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
     }
-    a {
-      color: #00c897;
-      text-decoration: none;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
+    header {
+      text-align: center;
       margin-bottom: 2rem;
     }
-    li {
-      margin-bottom: 1rem;
+    header h1 {
+      font-size: 2.5rem;
+      color: #00c897;
+      margin-bottom: .5rem;
     }
-    .section {
-      margin-top: 3rem;
+    header p {
+      color: #aaa;
+      font-size: .95rem;
+    }
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .post-item {
+      background: #1a1a1a;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      transition: background .2s;
+    }
+    .post-item:hover {
+      background: #232323;
+    }
+    .post-item h2 {
+      margin: .5rem 0;
+      color: #00c897;
+      font-size: 1.4rem;
+    }
+    .post-item p {
+      color: #ccc;
+      font-size: .95rem;
+    }
+    .divider {
+      height: 1px;
+      background: #333;
+      margin: 3rem 0;
+      border: none;
+    }
+    section.blog-content h2 {
+      color: #00c897;
+      font-size: 1.8rem;
+      margin-top: 2rem;
+    }
+    section.blog-content p, section.blog-content ul {
+      margin: .8rem 0;
+      font-size: 1rem;
+      color: #ddd;
+    }
+    section.blog-content ul {
+      padding-left: 1.2rem;
     }
     footer {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: .9rem;
       color: #888;
       border-top: 1px solid #333;
       padding-top: 1rem;
       margin-top: 3rem;
     }
+    footer a {
+      color: #00c897;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Quessar™ Blog</h1>
+      <p>Charging minds as well as vehicles. No plug? No problem. We deliver electrons — and entertainment.</p>
+    </header>
 
-  <h1>Quessar™ Blog</h1>
-  <ul>
-    <li><a href="#why">🚀 Why We Built Quessar™</a></li>
-    <li><a href="#tech">🔧 Behind Quessar™: The Tech & The Team</a></li>
-  </ul>
+    <div class="post-list">
+      <a class="post-item" href="#why">
+        <h2>⚡ Why We Built Quessar™</h2>
+        <p>Ever feel like charging an EV is like finding a unicorn with a socket? So did we. Here's our origin story — with a spark.</p>
+      </a>
+      <a class="post-item" href="#tech">
+        <h2>🔧 Behind Quessar™: The Tech & The Team</h2>
+        <p>Silent chargers, loud ambitions, and a team that's wired differently (in a good way). Peek under the hood.</p>
+      </a>
+    </div>
 
-  <div class="section" id="why">
-    <h2>🚀 Why We Built Quessar™</h2>
-    <p>In a city that never sleeps, EVs were supposed to be silent — but their charging problems are anything but quiet.</p>
-    <p><strong>Public charging stations are often:</strong></p>
-    <ul>
-      <li>Crowded or broken</li>
-      <li>Noisy with generators</li>
-      <li>Inconveniently located</li>
-    </ul>
-    <p>We started <strong>Quessar™</strong> to fix this.</p>
-    <p>Our goal is simple:<br />
-    <strong>Bring clean, quiet power to your EV — wherever you are.</strong></p>
-    <p>Whether you're at home, at work, or parked on the street, Quessar™ dispatches a silent mobile charging unit directly to you. It’s quiet, efficient, and contactless.</p>
-    <p>We’re a proudly Indian startup:</p>
-    <ul>
-      <li>🚀 Recognized by Startup India</li>
-      <li>✅ UDYAM Registered</li>
-      <li>🔒 Provisional Patent Filed</li>
-    </ul>
-    <p>We're launching in select areas soon — starting with <strong>Bangalore</strong>.</p>
-    <p>If you're an EV rider, delivery partner, fleet operator, or investor interested in supporting India's clean mobility future — we’d love to connect.</p>
-    <p>👉 Reach us at <a href="mailto:contact@quessar.com">contact@quessar.com</a><br />
-       👉 Follow us on <a href="https://instagram.com/quessar_official" target="_blank">Instagram</a> and <a href="https://linkedin.com/company/quessar" target="_blank">LinkedIn</a></p>
+    <hr class="divider" />
+
+    <div class="blog-content">
+      <h2 id="why">⚡ Why We Built Quessar™</h2>
+      <p>Once upon a charging station, a scooter waited... and waited. The charger was broken, the queue was longer than your last relationship, and the only sound was a noisy diesel generator going "vroom vroom" in irony.</p>
+      <p>We said, "Enough is enough. EVs are silent, clean, and modern — their charging should be too."</p>
+      <p>So, we created <strong>Quessar™</strong>: a doorstep EV charging service that’s so silent it could win a staring contest with your neighbor’s cat.</p>
+      <p><strong>The shocking truth about public chargers:</strong></p>
+      <ul>
+        <li>They’re either full, faulty, or fantasy</li>
+        <li>They hum louder than your uncle's snoring</li>
+        <li>They're always two kilometers further than you thought</li>
+      </ul>
+      <p>We made it our mission to flip the switch — literally. Charging should come to you, like pizza. Or better, like karma.</p>
+      <p>So here we are. Portable, peaceful, and punctual. Charging dreams, one silent zap at a time.</p>
+
+      <h2 id="tech">🔧 Behind Quessar™: The Tech & The Team</h2>
+      <p>Let’s get technical — but not the boring kind. Our chargers don’t just roll up — they glow up. They’re modular, mobile, and quieter than a library in space.</p>
+      <p><strong>What makes our tech cool (besides the green LEDs)?</strong></p>
+      <ul>
+        <li><strong>Mobile Charging Pods:</strong> We like to call them EV ninjas. Silent, swift, and they leave no mess.</li>
+        <li><strong>Smart Dispatch:</strong> Our system knows where you are — not in a creepy way, but in a "you-need-power" way.</li>
+        <li><strong>Battery TLC:</strong> We charge with care. No overstuffing, no drama, no exothermic love affairs.</li>
+        <li><strong>Zero Noise:</strong> Your EV gets charged. Your ears get rest. Win-win.</li>
+      </ul>
+      <p>And who's behind this bright idea? Glad you asked.</p>
+      <p><strong>Abhinav T R</strong> is our founder. He's part visionary, part inventor, part "let’s do this already."</p>
+      <p>Backed by a team that runs on ambition, caffeine, and occasionally electricity, we’re here to make EV charging so simple — your grandparents could summon it with a click.</p>
+
+      <p>💌 Got jokes? Got range anxiety? Email us at <a href="mailto:contact@quessar.com">contact@quessar.com</a><br>
+         🧠 Or follow our quiet revolution on <a href="https://instagram.com/quessar_official" target="_blank">Instagram</a> and <a href="https://linkedin.com/company/quessar" target="_blank">LinkedIn</a>.</p>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Quessar™. All rights reserved.</p>
+      <p><a href="index.html">← Back to Home</a></p>
+    </footer>
   </div>
-
-  <div class="section" id="tech">
-    <h2>🔧 Behind Quessar™: The Tech & The Team</h2>
-    <p>At Quessar™, our mission is powered by technology that's simple for the user, yet sophisticated behind the scenes.</p>
-    <ul>
-      <li><strong>Mobile Modular Chargers:</strong> Our silent chargers are compact, fast, and designed for doorstep delivery.</li>
-      <li><strong>Smart Dispatch System:</strong> Requests are routed to the nearest available unit with real-time tracking.</li>
-      <li><strong>Battery Management:</strong> Each charge is optimized based on your vehicle type, battery health, and local grid status.</li>
-      <li><strong>Noise-Free Operation:</strong> We use ultra-quiet components to keep your surroundings peaceful.</li>
-    </ul>
-    <p>We're working on app integration, predictive maintenance, and expanding compatibility with all major EVs.</p>
-    <p>Quessar™ is founded by passionate engineers and clean energy advocates who believe India's EV revolution should be accessible and elegant.</p>
-    <ul>
-      <li><strong>Abhinav T R</strong> – Founder & Visionary. An entrepreneur at heart with a background in mobility solutions, Abhinav leads the product and partnership roadmap.</li>
-      <li><strong>Advisors</strong> – Our extended circle includes experts from renewable energy, logistics, and electric vehicle ecosystems.</li>
-    </ul>
-    <p>Together, we're building a future where charging is not a stop — it's just part of the journey.</p>
-    <p>💌 Email us: <a href="mailto:contact@quessar.com">contact@quessar.com</a></p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Quessar™. All rights reserved.</p>
-    <p><a href="index.html">← Back to Home</a></p>
-  </footer>
 </body>
 </html>
