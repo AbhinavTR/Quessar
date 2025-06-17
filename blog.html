@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quessar™ Blog</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       background-color: #0d0d0d;
@@ -14,22 +16,22 @@
       padding: 0;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 2rem 1rem;
     }
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #00c897;
       margin-bottom: .5rem;
     }
     header p {
       color: #aaa;
-      font-size: .95rem;
+      font-size: 1rem;
     }
     .post-list {
       display: flex;
@@ -39,17 +41,19 @@
     }
     .post-item {
       background: #1a1a1a;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      transition: background .2s;
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: transform .2s, background .3s;
+      cursor: pointer;
     }
     .post-item:hover {
-      background: #232323;
+      background: #222;
+      transform: translateY(-4px);
     }
     .post-item h2 {
-      margin: .5rem 0;
+      margin: 0 0 .5rem;
       color: #00c897;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
     .post-item p {
       color: #ccc;
@@ -58,91 +62,107 @@
     .divider {
       height: 1px;
       background: #333;
-      margin: 3rem 0;
+      margin: 4rem 0;
       border: none;
     }
-    section.blog-content h2 {
+    .blog-content h2 {
       color: #00c897;
-      font-size: 1.8rem;
-      margin-top: 2rem;
+      font-size: 2rem;
+      margin-top: 2.5rem;
     }
-    section.blog-content p, section.blog-content ul {
-      margin: .8rem 0;
-      font-size: 1rem;
+    .blog-content p, .blog-content ul {
+      margin: 1rem 0;
+      font-size: 1.05rem;
       color: #ddd;
     }
-    section.blog-content ul {
+    .blog-content ul {
       padding-left: 1.2rem;
     }
+    .aos-fade { opacity: 0; transition: opacity 1s ease; }
     footer {
       text-align: center;
       font-size: .9rem;
       color: #888;
       border-top: 1px solid #333;
-      padding-top: 1rem;
-      margin-top: 3rem;
+      padding: 2rem 1rem 1rem;
+      margin-top: 4rem;
     }
     footer a {
       color: #00c897;
       text-decoration: none;
     }
+    .anim-block {
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .anim-block img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
+    <header data-aos="fade-down">
       <h1>Quessar™ Blog</h1>
       <p>Charging minds as well as vehicles. No plug? No problem. We deliver electrons — and entertainment.</p>
     </header>
 
     <div class="post-list">
-      <a class="post-item" href="#why">
+      <a class="post-item" href="#why" data-aos="fade-up">
         <h2>⚡ Why We Built Quessar™</h2>
         <p>Ever feel like charging an EV is like finding a unicorn with a socket? So did we. Here's our origin story — with a spark.</p>
       </a>
-      <a class="post-item" href="#tech">
-        <h2>🔧 Behind Quessar™: The Tech & The Team</h2>
+      <a class="post-item" href="#tech" data-aos="fade-up" data-aos-delay="100">
+        <h2>🔧 Behind Quessar™: The Tech & Team</h2>
         <p>Silent chargers, loud ambitions, and a team that's wired differently (in a good way). Peek under the hood.</p>
       </a>
+    </div>
+
+    <div class="anim-block" data-aos="zoom-in">
+      <img src="illustration.png" alt="Animated visual of Quessar charging" />
     </div>
 
     <hr class="divider" />
 
     <div class="blog-content">
-      <h2 id="why">⚡ Why We Built Quessar™</h2>
-      <p>Once upon a charging station, a scooter waited... and waited. The charger was broken, the queue was longer than your last relationship, and the only sound was a noisy diesel generator going "vroom vroom" in irony.</p>
-      <p>We said, "Enough is enough. EVs are silent, clean, and modern — their charging should be too."</p>
-      <p>So, we created <strong>Quessar™</strong>: a doorstep EV charging service that’s so silent it could win a staring contest with your neighbor’s cat.</p>
-      <p><strong>The shocking truth about public chargers:</strong></p>
-      <ul>
+      <h2 id="why" data-aos="fade-right">⚡ Why We Built Quessar™</h2>
+      <p data-aos="fade-up">Once upon a charging station, a scooter waited... and waited. The charger was broken, the queue was longer than your last relationship, and the only sound was a noisy diesel generator going "vroom vroom" in irony.</p>
+      <p data-aos="fade-up">We said, "Enough is enough. EVs are silent, clean, and modern — their charging should be too."</p>
+      <p data-aos="fade-up">So, we created <strong>Quessar™</strong>: a doorstep EV charging service that’s so silent it could win a staring contest with your neighbor’s cat.</p>
+      <ul data-aos="fade-up">
         <li>They’re either full, faulty, or fantasy</li>
         <li>They hum louder than your uncle's snoring</li>
         <li>They're always two kilometers further than you thought</li>
       </ul>
-      <p>We made it our mission to flip the switch — literally. Charging should come to you, like pizza. Or better, like karma.</p>
-      <p>So here we are. Portable, peaceful, and punctual. Charging dreams, one silent zap at a time.</p>
+      <p data-aos="fade-up">We made it our mission to flip the switch — literally. Charging should come to you, like pizza. Or better, like karma.</p>
 
-      <h2 id="tech">🔧 Behind Quessar™: The Tech & The Team</h2>
-      <p>Let’s get technical — but not the boring kind. Our chargers don’t just roll up — they glow up. They’re modular, mobile, and quieter than a library in space.</p>
-      <p><strong>What makes our tech cool (besides the green LEDs)?</strong></p>
-      <ul>
+      <h2 id="tech" data-aos="fade-right">🔧 Behind Quessar™: The Tech & The Team</h2>
+      <p data-aos="fade-up">Let’s get technical — but not the boring kind. Our chargers don’t just roll up — they glow up. They’re modular, mobile, and quieter than a library in space.</p>
+      <ul data-aos="fade-up">
         <li><strong>Mobile Charging Pods:</strong> We like to call them EV ninjas. Silent, swift, and they leave no mess.</li>
         <li><strong>Smart Dispatch:</strong> Our system knows where you are — not in a creepy way, but in a "you-need-power" way.</li>
         <li><strong>Battery TLC:</strong> We charge with care. No overstuffing, no drama, no exothermic love affairs.</li>
         <li><strong>Zero Noise:</strong> Your EV gets charged. Your ears get rest. Win-win.</li>
       </ul>
-      <p>And who's behind this bright idea? Glad you asked.</p>
-      <p><strong>Abhinav T R</strong> is our founder. He's part visionary, part inventor, part "let’s do this already."</p>
-      <p>Backed by a team that runs on ambition, caffeine, and occasionally electricity, we’re here to make EV charging so simple — your grandparents could summon it with a click.</p>
+      <p data-aos="fade-up">And who's behind this bright idea? Glad you asked.</p>
+      <p data-aos="fade-up"><strong>Abhinav T R</strong> is our founder. He's part visionary, part inventor, part "let’s do this already." Backed by a team that runs on ambition, caffeine, and occasionally electricity.</p>
 
-      <p>💌 Got jokes? Got range anxiety? Email us at <a href="mailto:contact@quessar.com">contact@quessar.com</a><br>
+      <p data-aos="fade-up">💌 Got jokes? Got range anxiety? Email us at <a href="mailto:contact@quessar.com">contact@quessar.com</a><br>
          🧠 Or follow our quiet revolution on <a href="https://instagram.com/quessar_official" target="_blank">Instagram</a> and <a href="https://linkedin.com/company/quessar" target="_blank">LinkedIn</a>.</p>
     </div>
 
-    <footer>
+    <footer data-aos="fade-in">
       <p>&copy; 2025 Quessar™. All rights reserved.</p>
       <p><a href="index.html">← Back to Home</a></p>
     </footer>
   </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
