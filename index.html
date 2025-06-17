@@ -1,4 +1,4 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>    
 <html lang="en">
 
 <head>
@@ -179,8 +179,6 @@
   <section class="hero">
     <h1>Silent EV Charging at Your Doorstep</h1>
     <p>Check availability in your area below.</p>
-
-    <!-- PIN Code Checker -->
     <form id="pincodeForm">
       <input type="text" id="pincodeInput" placeholder="Enter your PIN code" required />
       <button type="submit">Check Availability</button>
@@ -228,6 +226,22 @@
     </div>
   </section>
 
+  <!-- Recognition Section -->
+  <section class="features" style="background:#0d0d0d;">
+    <div class="feature">
+      <i class="fas fa-award"></i>
+      <h3>Recognized by Startup India</h3>
+    </div>
+    <div class="feature">
+      <i class="fas fa-id-card-alt"></i>
+      <h3>UDYAM Registered</h3>
+    </div>
+    <div class="feature">
+      <i class="fas fa-lock"></i>
+      <h3>Provisional Patent Filed</h3>
+    </div>
+  </section>
+
   <footer>
     <p>Contact us: <a href="mailto:contact@quessar.com">contact@quessar.com</a></p>
     <p>&copy; 2025 Quessar. All rights reserved.</p>
@@ -248,7 +262,6 @@
       e.preventDefault();
       const pincode = document.getElementById("pincodeInput").value.trim();
       const message = document.getElementById("availabilityMessage");
-
       if (pincode.length === 6 && /^\d+$/.test(pincode)) {
         message.innerText = "🚧 We're not available in this location yet — but we’re expanding fast. Stay tuned!";
       } else {
